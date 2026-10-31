@@ -1,0 +1,31 @@
+/* Shared across all pages: color tokens, reset, base typography */
+
+:root {
+  --bg: #f6f5f2;
+  --fg: #141414;
+  --muted: #6b6b6b;
+  --line: #d9d7d2;
+  --chip: #ffffff;
+  --chip-hover: #141414;
+  --chip-hover-fg: #f6f5f2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --fg: #f2f1ee;
+    --muted: #9a9a9a;
+    --line: #2c2c2c;
+    --chip: #1a1a1a;
+    --chip-hover: #f2f1ee;
+    --chip-hover-fg: #111111;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
