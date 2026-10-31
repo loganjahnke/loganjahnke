@@ -3,18 +3,154 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pts — Logan Jahnke</title>
+    <title>Pts — Keep score of any game</title>
+    <meta name="description" content="Pts is a scorekeeper for iPhone and iPad. Card games, dice games, backyard games — set the rules once and Pts does the math.">
+    <link rel="icon" type="image/png" href="/pts/img/icon-light.png">
+    <link rel="apple-touch-icon" href="/pts/img/icon-light.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/shared.css">
     <link rel="stylesheet" href="/css/pts.css">
   </head>
   <body>
-    <main class="pts">
+    <header class="topbar">
       <a class="back" href="/">&larr; Logan Jahnke</a>
-      <h1>Pts</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-copy">
+          <picture>
+            <source srcset="/pts/img/icon-dark.png" media="(prefers-color-scheme: dark)">
+            <img class="app-icon" src="/pts/img/icon-light.png" alt="Pts app icon" width="96" height="96">
+          </picture>
+          <h1>Keep score of any game.</h1>
+          <p class="lede">Card games, dice games, backyard games — set the rules once and Pts does the math.</p>
+          <div class="cta-row">
+            <!-- TODO: swap for the App Store link + official badge once Pts is live -->
+            <a class="cta" href="#" aria-disabled="true">Coming soon to the App Store</a>
+            <span class="cta-note">For iPhone &amp; iPad</span>
+          </div>
+        </div>
+
+        <!-- Illustrative scoreboard, styled after the app -->
+        <div class="device" aria-hidden="true">
+          <div class="screen">
+            <div class="screen-head">
+              <span class="screen-game">Flip 7</span>
+              <span class="screen-round">Round 6</span>
+            </div>
+            <p class="screen-target">First to 200</p>
+
+            <div class="card card-lead" style="--solid:#E8383E; --on:#fff;">
+              <div class="card-row">
+                <span class="card-name"><svg class="crown" viewBox="0 0 24 24"><path d="M3 7l4.5 4L12 4l4.5 7L21 7v11H3z"/></svg>Maya</span>
+                <span class="card-score">164</span>
+              </div>
+              <div class="bar"><span style="width:82%"></span></div>
+            </div>
+            <div class="card" style="--solid:#4B4BC8; --on:#fff;">
+              <div class="card-row"><span class="card-name">Sam</span><span class="card-score">141</span></div>
+              <div class="bar"><span style="width:70%"></span></div>
+            </div>
+            <div class="card" style="--solid:#FFC21A; --on:#231A00;">
+              <div class="card-row"><span class="card-name">Jordan</span><span class="card-score">118</span></div>
+              <div class="bar"><span style="width:59%"></span></div>
+            </div>
+            <div class="card" style="--solid:#2EBD6B; --on:#231A00;">
+              <div class="card-row"><span class="card-name">Alex</span><span class="card-score">96</span></div>
+              <div class="bar"><span style="width:48%"></span></div>
+            </div>
+
+            <div class="quick">
+              <span>+1</span><span>+5</span><span>+10</span><span>+15</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core features -->
+      <section class="section">
+        <h2>Built for game night</h2>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+            </div>
+            <h3>Define any game</h3>
+            <p>Play to a target score or a set number of rounds. Highest or lowest wins, negative scores, solo or teams — tell Pts once and it remembers.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M4 6h1M4 12h1M4 18h1"/></svg>
+            </div>
+            <h3>Score round by round</h3>
+            <p>Quick buttons tuned to each game make every round fast. Made a mistake? Undo the last round and fix it.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 7l4.5 4L12 4l4.5 7L21 7v11H3z"/></svg>
+            </div>
+            <h3>See who's winning</h3>
+            <p>Live standings with a crown for the leader, a nudge when someone hits the target, and a history of every match.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Templates -->
+      <section class="section">
+        <h2>Classics, ready to play</h2>
+        <p class="section-lede">Start from a template with the scoring already set up, or build your own from scratch.</p>
+        <ul class="templates">
+          <li style="--solid:#FF7A1A; --on:#231A00;"><strong>Flip 7</strong><span>First to 200</span></li>
+          <li style="--solid:#F0458F; --on:#231A00;"><strong>Hearts</strong><span>Lowest wins · 100</span></li>
+          <li style="--solid:#4B4BC8; --on:#fff;"><strong>Spades</strong><span>Teams · 500</span></li>
+          <li style="--solid:#2EBD6B; --on:#231A00;"><strong>Euchre</strong><span>Teams · 10</span></li>
+          <li style="--solid:#8CCB2E; --on:#231A00;"><strong>Golf</strong><span>9 rounds · lowest wins</span></li>
+          <li style="--solid:#00B4C8; --on:#231A00;"><strong>Rummy</strong><span>First to 100</span></li>
+          <li style="--solid:#2F6FE0; --on:#fff;"><strong>Gin Rummy</strong><span>2 players · 100</span></li>
+          <li style="--solid:#FFC21A; --on:#231A00;"><strong>Farkle</strong><span>First to 10,000</span></li>
+        </ul>
+      </section>
+
+      <!-- Details -->
+      <section class="section">
+        <h2>The little things</h2>
+        <div class="details">
+          <div><h3>Teams</h3><p>Pair players up for Spades, Euchre, or any team game you invent.</p></div>
+          <div><h3>Players &amp; colors</h3><p>Everyone gets a color and an icon, carried across every game they play.</p></div>
+          <div><h3>Share the result</h3><p>Send a clean result card to the group chat when the game's over.</p></div>
+          <div><h3>Private by design</h3><p>No account and no sign-up. Your games and scores stay on your device.</p></div>
+        </div>
+      </section>
+
+      <!-- Pts+ -->
+      <section class="section">
+        <div class="plus">
+          <div class="plus-head">
+            <span class="plus-badge">Pts+</span>
+            <h2>One purchase. Every extra, for good.</h2>
+            <p>Scoring, templates, teams, and your match history stay free, always. Pts+ is a one-time purchase with Family Sharing.</p>
+          </div>
+          <ul class="plus-list">
+            <li><strong>Unlimited custom games</strong> Make as many games from scratch as you like.</li>
+            <li><strong>Customize templates</strong> Change the players, scoring, and ending of any classic.</li>
+            <li><strong>Player insights</strong> Streaks, recent form, win rate over time, and head-to-head records.</li>
+            <li><strong>Live Activity</strong> The scoreboard on your Lock Screen and in the Dynamic Island.</li>
+            <li><strong>Result card styles</strong> Dark and winner-color cards to share.</li>
+            <li><strong>Export history</strong> Every match and round as a CSV spreadsheet.</li>
+            <li><strong>Pastel palette &amp; more icons</strong> Softer colors and more icons for games.</li>
+            <li><strong>App icons</strong> Pick the look on your Home Screen.</li>
+          </ul>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <p>Questions or feedback? <a href="mailto:dev@loganjahnke.com">dev@loganjahnke.com</a></p>
+      <p><a href="/pts/privacy/">Privacy policy</a> · Made by <a href="/">Logan Jahnke</a></p>
+    </footer>
   </body>
 </html>
