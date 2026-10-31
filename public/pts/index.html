@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pts — Logan Jahnke</title>
+    <style>
+      :root { --bg: #f6f5f2; --fg: #141414; --muted: #6b6b6b; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #111111; --fg: #f2f1ee; --muted: #9a9a9a; }
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: center;
+      }
+      h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+      p { color: var(--muted); }
+      a { color: var(--fg); }
+    </style>
+  </head>
+  <body>
+    <h1>Pts</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <a href="/">&larr; Back</a>
+  </body>
+</html>
